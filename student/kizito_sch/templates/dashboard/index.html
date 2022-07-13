@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <script
+      src="https://kit.fontawesome.com/106c0b6189.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .dashboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        /* padding: 5px; */
+      }
+      nav {
+        background-color: black;
+        /* padding: 10px; */
+        align-items: center;
+      }
+      .nav-items {
+        display: flex;
+        padding: 5px;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+      }
+      .profile-image {
+        width: 70px;
+        border-radius: 50%;
+      }
+      .nav_links {
+        display: flex;
+      }
+      .nav_links > li {
+        list-style-type: none;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+      }
+      .nav_links > li > a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+      }
+      .fa-thin {
+        color: white;
+      }
+
+      /* overview section styling */
+
+      .cards {
+        /* width: 50%; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        column-gap: 10px;
+        padding: 10px;
+        flex-wrap: nowrap;
+      }
+      .card h1,
+      p {
+        color: white;
+        text-align: center;
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 7px;
+        background-color: black;
+        align-items: center;
+        padding: 10px;
+        border-radius: 15px;
+      }
+      .card > img {
+        width: 400px;
+        object-fit: contain;
+      }
+      .card > button {
+        width: 30%;
+        background-color: blue;
+        text-align: center;
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        font-size: larger;
+      }
+      /* progess bar styling */
+      .progress {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+      }
+      .prog {
+        display: flex;
+        flex-direction: column;
+      }
+      .course1 {
+        background-color: rebeccapurple;
+        width: 80%;
+        border-radius: 15px;
+      }
+      .p-bar {
+        background-color: black;
+        color: white;
+        padding: 1%;
+        text-align: right;
+        font-size: 20px;
+        border-radius: 15px;
+      }
+      .html {
+        width: 60%;
+      }
+      .dj {
+        width: 40%;
+      }
+      .js {
+        width: 80%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- Navigation menu starts here -->
+      <nav>
+        <div class="nav-items">
+          <div>
+            <img
+              class="profile-image"
+              src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?t=st=1656153501~exp=1656154101~hmac=e34b422e24ed3f9810a632b0d5eea053d80d2384cf1c61b198a3f899ce5be451&w=826"
+              alt="profile=pic"
+            />
+          </div>
+          <div class="nav_links">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Courses</a>
+            </li>
+            <li>
+              <a href="#">Logout</a>
+            </li>
+          </div>
+        </div>
+      </nav>
+      <!-- overview section starts here-->
+
+      <section class="cards">
+        <!-- 
+                    image
+                    course tittle
+                    course description
+                 -->
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-vector/golf-course-with-green-grass-pond-sunset_107791-6976.jpg?size=626&ext=jpg&uid=R47395363"
+            alt="course image"
+          />
+          <h1>Python basics</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            tempore, dolorem cum cupiditate repellendus ratione!
+          </p>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-vector/golf-course-with-green-grass-pond-sunset_107791-6976.jpg?size=626&ext=jpg&uid=R47395363"
+            alt="course image"
+          />
+          <h1>Python basics</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            tempore, dolorem cum cupiditate repellendus ratione!
+          </p>
+          <button>View</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-vector/golf-course-with-green-grass-pond-sunset_107791-6976.jpg?size=626&ext=jpg&uid=R47395363"
+            alt="course image"
+          />
+          <h1>Python basics</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            tempore, dolorem cum cupiditate repellendus ratione!
+          </p>
+          <button>View</button>
+        </div>
+      </section>
+
+      <hr />
+      <!-- TODO: progress section -->
+      <section class="progress">
+        <h3>Python Bsicics Progress</h3>
+        <div class="course1">
+          <div class="p-bar html">60%</div>
+        </div>
+        <h3>Django</h3>
+        <div class="course1">
+          <div class="p-bar dj">40%</div>
+        </div>
+        <h3>Javascript</h3>
+        <div class="course1">
+          <div class="p-bar js">80%</div>
+        </div>
+      </section>
+      <!-- TODO: Upcoming tests -->
+      <!-- <section class="activities">
+        <h1>Upcoming Activities</h1>
+      </section> -->
+    </div>
+  </body>
+</html>

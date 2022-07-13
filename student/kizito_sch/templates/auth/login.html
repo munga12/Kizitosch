@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+        }
+        .login_page{
+            width:50%;
+            display: flex;
+            /* padding: 10px ; */
+            align-items: center;
+            margin: 0 auto;
+            flex-direction: column;
+            background-color: rgb(185, 181, 181);
+        }
+        .login_page > form > div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .login_page >h1{
+            text-align: center;
+        }
+        .login_page >form > div >label{
+            display: flex;
+            text-align: left;
+            color: blue;
+        }
+        .input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        form > button{
+            width: 30%;
+            background-color: blue;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            border: none;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="login_page">
+        <h1>Login</h1>
+        <form action="" method="POST">
+            {% csrf_token%}
+            <div>
+                <label for="username">username</label>
+                <input type="text" name="usename" class="input">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" class="input">
+            </div>
+            <div>
+                <button type="submit" name="submit">Login</button>
+            </div>
+        </form>
+        <p>Don't have an account? <a href="/register">signup</a></p>
+    </div>
+</body>
+</html>
